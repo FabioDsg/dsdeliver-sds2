@@ -18,13 +18,15 @@ public class Product implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	
+
 	private String name;
-	
 	private double price;
 	private String description;
 	private String imageUri;
+	
+	public Product() {
+		
+	}
 	
 	public Product(Long id, String name, double price, String description, String imageUri) {
 		super();

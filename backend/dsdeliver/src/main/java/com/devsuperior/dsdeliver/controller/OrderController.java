@@ -15,9 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.devsuperior.dsdeliver.dto.OrderDTO;
-import com.devsuperior.dsdeliver.dto.ProductDTO;
 import com.devsuperior.dsdeliver.services.OrderService;
-import com.devsuperior.dsdeliver.services.ProductService;
 
 @RestController
 @RequestMapping(value = "/orders")

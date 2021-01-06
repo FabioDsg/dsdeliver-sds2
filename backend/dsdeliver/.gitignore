@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+###SQLScrip###
+create.sql

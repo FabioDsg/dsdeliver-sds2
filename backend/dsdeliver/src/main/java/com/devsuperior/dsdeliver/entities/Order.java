@@ -29,8 +29,7 @@ public class Order implements Serializable{
 	private double longitude;
 	private Instant moment;
 	private OrderStatus status;
-	//private double total;
-	
+		
 	// Using "Set" instead "List" to avoid duplicity of the same product in the same order
 	@ManyToMany
 	@JoinTable(name = "tb_order_product",
@@ -104,10 +103,15 @@ public class Order implements Serializable{
 		this.status = status;
 	}
 
-//	public double getTotal() {
-//		return total;
-//	}
-//
+	public double getTotal() {
+		double sum = 0.0;
+		for(Product p : products) {
+			
+			sum += p.getPrice();
+		}
+		return sum;
+	}
+
 //	public void setTotal(double total) {
 //		this.total = total;
 //	}
